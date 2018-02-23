@@ -1,0 +1,255 @@
+.navigasyon {
+    background: $lGray;
+    padding: 18px 0 15px 0;
+    text-align: center;
+    /*box-shadow: inset 2px 4px 2px -1px rgba(0, 0, 0, 0.08);*/
+    > span{
+        max-width: 1230px;
+        padding: 0 15px;
+        margin: 0 auto;
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        position: relative;
+        a{
+            display: inline-block;
+            padding: 2px 5px 0px 0;
+            font-size: 14px;
+            float: left;
+            line-height: 25px;
+            font-family: $medium;
+            color: rgb(7, 2, 2);
+            &:before{
+                content:'/';
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 5px;
+                position: relative;
+                top:-2px;
+            }
+            &:last-child{
+                display: block;
+                float: none;
+                text-align: center;
+                font-size: 25px;
+                font-family: $sbold;
+                &:before{ display: none; }
+            }
+            &.home-btn{ 
+                &:before{ display: none; } 
+            }
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}
+
+.ems-page{
+    &-detail {
+        .navigasyon {
+            background: none;
+            position: relative;
+            > span {
+                max-width: 1430px;
+                a {
+                    &:last-child {
+                        display: inline-block;
+                        font-size: 15px;
+                        float: left;
+                        line-height: 25px;
+                        font-family: "regular";
+                        &:before{
+                            content:'/';
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 5px;
+                            position: relative;
+                            top:-2px;
+                        }
+                    }
+                }
+            }
+            .ems-prd-product-code {
+                position: absolute;
+                right: 15px;
+                top: 6px;
+                font-family: $medium;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .urunNavigasyon {
+        position:absolute;
+        width: 100%;
+        min-height: auto;
+        max-height: 100vh;
+        background: $lGray;
+        z-index: 11;
+        top: 50px;
+        left: 0;
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        padding: 20px 0;
+        text-align: left;
+        box-shadow:none;
+        border-top: 2px solid $mGray;
+        display: none;
+    }
+
+    .urunNavigasyon>span {
+        display: table;
+        width: 100%;
+        padding: 0;
+    }
+
+    .urunNavigasyon>span .ems-mb-nav-close {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 15px;
+        height: 15px;
+        display: none;
+    }
+
+    .urunNavigasyon>span .ems-mb-nav-close i,.urunNavigasyon>span .ems-mb-nav-close i:before {
+        font-size: 15px
+    }
+
+    .urunNavigasyon > span a {
+        font-family: $medium !important;
+        font-size: 14px !important;
+        color: #000;
+        display: block;
+        position: relative;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 0;
+        padding-left: 25px;
+        word-break: break-word;
+        float: none;
+        text-align: left !important;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .urunNavigasyon > span a:after {
+        /*display: none*/ 
+    }
+
+    .urunNavigasyon > span a:before {
+        font-family: 'icomoon';
+        content: '\e90a';
+        width: 20px;
+        height: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+        position: absolute;
+        top: 50%;
+        text-align: left !important;
+        left: 0;
+        margin-top: -15px;
+        margin-right: inherit;
+        display: inline-block !important;
+    }
+
+    .urunNavigasyon > span a:first-child:before {
+        display: inline-block
+    }
+
+    .urunNavigasyon > span a.home-btn {
+        display: block
+    }
+
+    .urunNavigasyon > span a:nth-child(1) {
+        margin-left: 0
+    }
+
+    .urunNavigasyon > span a:nth-child(2) {
+        margin-left: 25px
+    }
+
+    .urunNavigasyon > span a:nth-child(3) {
+        margin-left: 50px
+    }
+
+    .urunNavigasyon > span a:nth-child(4) {
+        margin-left: 75px
+    }
+
+    .urunNavigasyon > span a:nth-child(5) {
+        margin-left: 100px
+    }
+    .urunNavigasyon > span a:nth-child(6) {
+        margin-left: 125px
+    }
+    .urunNavigasyon > span a:nth-child(7) {
+        margin-left: 150px
+    }
+    .urunNavigasyon > span a:nth-child(8) {
+        margin-left: 175px
+    }
+
+    body.mobile-navigation-animate {
+        /*overflow: hidden*/
+    }
+
+    body.mobile-navigation-animate {
+        .urunNavigasyon {
+            display: block;
+        }
+        .ems-cat-description {
+            &-inner {
+                span {
+                    &:before {
+                        content: '\e907';
+                        font-family: 'icomoon';
+                        color: #000;
+                        font-size: 10px;
+                        float: right;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    body.mobile-navigation-animate .vailNavigation {
+        opacity: .5;
+        visibility: visible
+    }
+    /* Mobil Navigasyon */
+    .ems-cat-description {
+        background: $lGray;
+        text-align: left;
+        &-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 !important;
+            span {
+                display: block;
+                text-align: left;
+                font-size: 16px;
+                font-family: $sbold;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: 16px 20px !important;
+                &:before {
+                    content: '\e904';
+                    font-family: 'icomoon';
+                    color: #000;
+                    font-size: 10px;
+                    float: right;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

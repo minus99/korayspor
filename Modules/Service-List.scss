@@ -1,0 +1,218 @@
+.ems-page-member{
+    .ems-page-default{
+        .mod-service-list{
+            .back-btn, .toggle-map, .left-column{ display: none; }
+            &-header{
+                > span{
+                    display:block;
+                    .title{
+                        font-family:$sbold;
+                        font-size: 25px;
+                        letter-spacing: 0.5px;
+                        display: block;
+                        padding-bottom: 5px;
+                    }
+                }
+                .ems-form{
+                    &-inner{
+                        @include flex();
+                        @include flexDirection();
+                        justify-content: flex-start;
+                        padding:20px 0;
+                        max-width: none;
+                        .ems-field{
+                            width: 100%;
+                            max-width: 360px;
+                            margin-bottom: 0;
+                            margin-right: 20px;
+                            &:last-child {
+                                margin: 0;
+                            }
+                            .sStylerMainWrp.sStylerWrp_select{
+                                .sStylerWrp{
+                                    padding-top: 22px;
+                                    padding-bottom: 10px;
+                                    padding-left: 15px;
+                                    font-family: $medium; 
+                                    font-size: 16px;
+                                    color: #000;
+                                    text-transform: uppercase;
+                                    &:after{
+                                        right:20px;
+                                    }
+                                }
+                            }
+                            .ems-form-obj{
+                                max-width: 360px;
+                                margin-bottom: 0;
+                                a {
+                                    padding: 19px 5px 17px 5px;
+                                }
+                            }
+                            &.select-1{
+                                display: none;
+                            }
+                            &.select-2{
+                                margin-right: 20px;
+                            }
+                            &.select-2, &.select-3{
+                                .ems-form-label{
+                                    top: 7px;
+                                    left: 5px;
+                                    line-height: 1;
+                                    font-size: 12px;
+                                    color: #8c8c8c;
+                                }
+                            }
+                            &.select-4{
+                                .ems-form-label{ display:none; }
+                                .ems-form-obj{
+                                    &-input{ display:none; }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .address-detail{
+                .map{
+                    height: 400px;
+                }
+            }
+            .service-list{
+                .servisIcerik{
+                    display: grid;
+                    grid-auto-flow: dense;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-column-gap: 20px;
+                    grid-row-gap: 20px;
+                    padding-top: 20px;
+                    &:empty{ display:none; }
+                    .pServisListe {
+                        background: $lGray;
+                        padding: 10px;
+                        border-radius: 5px;
+                        color: #000;
+                        @include flex();
+                        @include flexDirection(column);
+                        justify-content: space-between;
+                        .divServisListe_DepoSec,
+                        .tableServisCalismaSaatleri,
+                        .divServisListe_ServisTur,
+                        .divServisListe_WebAdresi,
+                        .divServisListe_Email,
+                        .divServisListe_UlkeSehirSemt,
+                        .divServisListe_Fax{
+                            display: none;
+                        }
+                        .divServisListe_FirmaAdi,
+                        .divServisListe_Adres,
+                        .divServisListe_Telefon,
+                        .divServisListe_Yetkili{
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                        .divServisListe_FirmaAdi{
+                            order: 1;
+                            font-family: $sbold;
+                            font-size: 18px;
+                            letter-spacing: 0.4px;
+                            color: #000;
+                            margin-top: 10px;
+                            max-height: 38px;
+                            overflow: hidden;
+                        }
+                        .divServisListe_Adres{
+                            order: 2;
+                            font-family: $regular;
+                            font-size: 15px;
+                            margin-top: 20px;
+                            line-height: 22px;
+                            letter-spacing: 0.5px;
+                        }
+                        .divServisListe_Yetkili{
+                            margin-top: 20px;
+                            order: 4;
+                            font-family: $medium;
+                            text-align: left;
+                            font-size: 15px;
+                            letter-spacing: 0.5px;
+                            color: #000;
+                            min-height: 30px;
+                            &:before{
+                                content:'ÇALIŞMA SAATLERİ';
+                                font-size: 10px;
+                                font-family: $medium;
+                                color: #787d81; 
+                                letter-spacing:1px;
+                                display: block;
+                                padding-bottom: 3px;
+                            }
+                        }
+                        .divServisListe_Telefon{
+                            order: 3;
+                            line-height: 22px;
+                        }
+                        .divServisListe_Koordinat{
+                            order: 5;
+                            a{
+                                display: block;
+                                font-family: $sbold;
+                                border-radius:3px;
+                                background: $orange;
+                                font-size: 15px;
+                                color: #fff;
+                                letter-spacing:0.5px;
+                                text-align: center;
+                                padding: 15px 10px 14px 10px;
+                                margin-top: 20px;
+                                &:hover{
+                                    background: $gray;
+                                }
+                                &.show-map-btn{display:none;}
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+    }
+} 
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page-member {
+        .ems-page-default {
+            .mod-service-list-header {
+                .title {display: none !important;}
+                .ems-form-inner {
+                    padding: 0 !important;
+                    display: inline-block !important;
+                    .ems-field {
+                        width: 100% !important;
+                        margin: 0 !important;
+                        max-width: none !important;
+                        .ems-form-obj {
+                            width: 100% !important;
+                            max-width: none !important;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+            .mod-service-list {
+                .service-list {
+                    .servisIcerik {
+                        display: inline-block;
+                        width: 100%;
+                        .servis_bilgi {
+                            display: none;
+                        }
+                        .pServisListe{
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,283 @@
+.ems-page-default{
+    &-member-order{
+        .ems-order-form{
+            .ems-message-error{
+                box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+                background: #fff;
+                border: none;
+                padding: 50px 10px;
+                text-align: center;
+                margin-bottom: 0;
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-family: $sbold;
+                    font-size: 25px;
+                    color: #000;
+                }
+                &:before{
+                    margin-right: 15px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+
+.ems-page-default-order-detail{
+    .order-sip-prev, .order-sip-cancel, .order-cancel-button{
+        .btnSipariseDon, .btnSipIptal, .btnIptalEt{
+            width: auto;
+            min-width: 80px;
+            background: none;
+            padding:5px 0;
+            text-align: left;
+            margin-bottom: 20px;
+            &:after{
+                font-family:'icomoon';
+                content:'\e906';
+                font-size: 9px;
+                width: 9px;
+                height: 9px;
+                display: inline-block;
+                margin-left: 5px;
+                color: $blue;
+            }
+            span{
+                font-family: $medium;
+                font-size: 15px;
+                color: $blue;
+                text-decoration:underline;
+                &:before{display: none;}
+            }
+        }
+        .btnSipariseDon{
+            &:before{
+                font-family:'icomoon';
+                content:'\e905';
+                font-size: 9px;
+                width: 9px;
+                height: 9px;
+                display: inline-block;
+                margin-right: 5px;
+                color: $blue;
+            }
+            &:after{ display:none; }
+        }
+        .btnSipIptal{
+            span{
+                color: $orange;
+            }
+            &:after{
+                color: $orange;
+            }
+        }
+    }
+    .order-cancel-button{
+        .ems-message{
+            margin-top: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            &-success{
+                margin-bottom: 20px;
+                background: $orange;
+                color: #fff;
+            }
+            &:before{ display: none; }
+        }
+        .btnIptalEt{
+            margin-top: 20px;
+            span{
+                &:before{display: none;}
+            }
+        }
+    }
+    .order-detail-info {
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+        > div {
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+            > div {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+                padding: 14px 10px 14px 20px;
+                font-size: 14px;
+                color: $lDark;
+                word-break: break-word;
+                &.text {
+                    font-family: $sbold;
+                    font-size: 16px;
+                    background: $lGray;
+                    color: #000;
+                }
+                &.value {
+                    font-family: $medium;
+                    font-size: 16px;
+                    color: $mDark;
+                }
+                &:empty {
+                    &:before {
+                        content: "-";
+                    }
+                }
+            }
+        }
+    }
+    .order-address-container{
+         @include flex();
+         @include flexDirection();
+         justify-content: space-between;
+         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+         margin-top: 30px;
+         padding: 20px;
+         .order-address{
+             .text{
+                font-family: $sbold;
+                font-size: 16px;
+                color: #000;
+                padding-bottom: 10px;
+             }
+             .value{
+                font-family: $regular;
+                color: $mDark;
+                font-size: 15px;
+                line-height: 20px;
+             }
+         }
+    }
+    .inner-title{
+        padding: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        font-family: $sbold;
+        font-size: 16px;
+        color: #000;
+    }
+    .ems-grid-default{
+        .ems-grid-row{
+            .ems-grid-name{
+                font-family: $sbold;
+                font-size: 18px;
+            }
+            .ems-grid-price-total{
+                font:before{display: none;}
+            }
+        }
+    }
+    .order-detail-info-payment{
+        text-align: right;
+        &-wrp{
+            display: inline-block;
+            width: 100%;
+            max-width: 320px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            > div{
+                width: 100%;
+                display: table;
+                table-layout: fixed;
+                > div{
+                    display: table-cell;
+                    vertical-align: middle;
+                    font-family: $medium;
+                    font-size: 15px;
+                    color: #000;
+                    text-transform: uppercase;
+                    padding: 10px 0;
+                    &:empty{ display:none; }
+                }
+                &.discount{
+                    > div{
+                        color: $orange;
+                    }
+                }
+                &.total{
+                    > div{
+                        font-family: $sbold;
+                    }
+                }
+            }
+        }
+    }
+    &.page-order-cancel{
+        .bottom-step{
+            .prev{
+                .btnSipariseDon{
+                    margin-top: 30px;
+                    max-width: 200px;
+                }
+            }
+        }
+        .ems-grid-default{
+            .ems-grid-row{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .ems-grid-name{
+                width: 30%;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .ems-grid-status, .ems-grid-pieces{
+                width: 10%;
+                text-align: center;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .ems-grid-piece0{
+                width: 20%;
+                .sStylerMainWrp.sStylerWrp_select{
+                    &:nth-child(2){
+                        margin-top:10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page-default-member-order {
+        .ems-order-form {
+            .ems-message-error {
+                box-shadow: none;
+                border-bottom: 2px solid $mGray;
+                border-top: 2px solid $mGray;
+                border-radius: 0;
+            }
+        }
+    }
+    .ems-page-default-order-detail {
+        .order-detail-info  {
+            box-shadow: none;
+            > div {
+                width: 100%;
+                border-bottom: 1px solid $mGray;
+                background: $lGray;
+                &:first-child {border-top: 1px solid $mGray;}
+                > div {
+                    padding: 10px 10px 10px 20px;
+                    &.text, &.value {
+                        font-size: 14px;
+                        background: none;
+                    }
+                }
+            }
+        }
+        .order-address-container {
+            display: inline-block;
+            width: 100%;
+            padding: 0;
+            box-shadow: none;
+            .order-address {
+                width: 100%;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid $mGray;
+            }
+        }
+    }
+}

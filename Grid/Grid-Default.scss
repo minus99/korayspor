@@ -1,0 +1,311 @@
+.ems-page {
+    &-member{
+        .ems-grid-default {
+            box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.3);
+            border-radius: 5px;
+            .ems-grid-header {
+                display: none;
+            }
+            .ems-grid-row {
+                padding: 30px 0;
+                border-bottom: 2px solid $lGray;
+                display: table;
+                table-layout: fixed;
+                width: 94%;
+                margin: 0 3%;
+                > div {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                .ems-grid-img {
+                    width: 100px;                    
+                    border: 1px solid $lGray;
+                    text-align: center;
+                    a {display: inline-block;}
+                    img {
+                        max-height: 85px;
+                    }
+                }
+                .ems-grid-name {
+                    padding: 0 20px 0 10px;
+                    width: 30%;
+                    span {
+                        font-size: 13px;
+                        font-family: $regular;
+                    }
+                    a {
+                        span {
+                            &.prdItem {
+                                font-family: $bold;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+                .ems-grid-code {
+                    width: 15%;
+                    text-align: center;
+                    a {
+                        font-size: 15px;
+                        font-family: $regular;
+                        display: block;
+                    }
+                }
+                .ems-grid-piece {
+                    width: 25%;
+                    text-align: center;
+                    input {
+                        width: 100% !important;
+                        max-width: 65px;
+                        border: 1px solid $lDark;
+                        text-align: center;
+                        position: relative;
+                        top: -3px;
+                        height: 30px;
+                    }
+                    a {
+                        border: 1px solid $inputborder;
+                        display: inline-block;
+                        padding: 7px;
+                        color: $inputborder;
+                        height: 30px;
+                        &:hover {
+                            background: $fdYellow;
+                            color: $lDark;
+                            border: 1px solid $fdYellow;
+                        }
+                    }
+                }
+                .ems-grid-price-total {
+                    width: 20%;
+                    text-align:center;
+                    font {
+                        font-size: 18px;
+                        font-family: $sbold;
+                        text-align: right;
+                        &.topFiyat {
+                            font-size: 13px;
+                            font-family: $medium;
+                            color: $mGray;
+                        }
+                    }
+                }
+                .ems-price{
+                    color: #221e1f;
+                    &:before{
+                        float: left;
+                        font-family:$tl;
+                        content:'t';
+                        font-size: 15px;
+                        color: #221e1f;
+                        padding-right: 3px;
+                    }
+                }
+                .ems-grid-delete {
+                    width: 8%;
+                    text-align: right;
+                }
+                &:last-child {
+                    border: 0;
+                }
+                .kdvDahil{display: none;}
+            }
+        }
+        .same-address{display: none;}
+        .add-new-address {
+            .btnAdresEkle {
+                background: $edGray;
+                font-family: $regular;
+                padding: 10px 20px;
+                margin: 20px 0;
+                width: auto;
+                span {
+                    letter-spacing: 0;
+                    font-size: 13px;
+                    color: $darkBlack;
+                }
+                &:hover {
+                    background: $lDark;
+                    span {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        a.btnTakipListeStokTumSil, a.btnFavoriListeTumSil, a.btnTakipListeFiyTumSil{
+            margin: 20px 0 0 0;
+            max-width: 175px;
+            padding-top:11px;
+            padding-bottom:9px;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page {
+        &-member{
+            .ems-grid-default {
+                border-top: none;
+                border-bottom: none;
+                box-shadow: none;
+                > div {
+                    display: inline-block !important;
+                    /*width: 50% !important;*/
+                    margin: 0 0 25px 0 !important;
+                    padding: 0 0 50px 0 !important; 
+                    border-bottom: 2px solid $mGray !important;
+                    vertical-align: top;
+                    &.ems-grid-header {
+                        width: 120px !important;
+                    }
+                    &.ems-grid-row {
+                        width: calc(100% - 120px);
+                        > div {
+                            text-align: right !important; 
+                            .brFiyat, .topFiyat {
+                                font-family: $medium;
+                                color: $mGray;
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                    > div {
+                        width: 100% !important;
+                        display: inline-block !important;
+                        padding: 0 !important; 
+                        margin-bottom: 30px;
+                        height: 25px;
+                        span {
+                            font-family: $medium;
+                            font-weight: bold;
+                            font-size: 14px;
+                            color: #000;
+                        }
+                        &.ems-grid-order-replay {
+                            position: absolute;
+                            left: 0;
+                            text-align: center !important;
+                            margin-top: 55px;
+                            span {
+                                color: $blue;
+                                font-size: 13px;
+                            }
+                        }
+                        &.ems-grid-img {
+                            height: 100px !important;
+                        }
+                    }
+                }
+                &.ems-grid-order-products {
+                    
+                    > div {
+                        padding: 0 !important;
+                        &.ems-grid-row {
+                            > div {
+                                &.ems-grid-img {
+                                    width: 100px !important;
+                                    float: right;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                /* Favori */
+                
+                &.ems-grid-favorites, &.ems-grid-follow-price, &.ems-grid-default-stock {
+                    .ems-grid-header {
+                        display: none !important;
+                    }
+                    .ems-grid-row {
+                        width: 100% !important;
+                        position: relative;
+                        padding: 0 0 30px 0 !important;
+                        > div {
+                            width: auto !important;
+                            vertical-align: top;
+                            margin-bottom:0 !important;
+                            text-align: left !important;
+                            padding-left: 100px !important;
+                            display: block !important;
+                            height: auto !important;
+                            span {
+                                font-weight: normal;
+                            }
+                        }
+                        .ems-grid-price-total {
+                            /*position: absolute;
+                            right: 0;
+                            top: 0;
+                            padding: 0 !important;*/
+                            margin-bottom: 20px !important;
+                            span {
+                                font-size: 18px;
+                                font-family: $sbold;
+                            }
+                        }
+                        .ems-grid-name {
+                            text-align: left !important;
+                            margin-bottom: 30px !important;
+                        }
+                        .ems-grid-option1 {
+                            .urunListe_secenek1 {
+                                .dropdown-trigger {
+                                    text-align: left;
+                                    float: right;
+                                    margin: 20px 0;
+                                    min-width: 125px;
+                                }
+                                &.opened {
+                                    .dropdown-trigger {
+                                        span {
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                            .dropdown-options {
+                                right: 0;
+                                left: auto !important;
+                                top: 55px !important;
+                                border-top-right-radius: 0px;
+                                border-top-left-radius: 3px;
+                            }
+                        }
+                        .ems-grid-delete {
+                            float: left;
+                            padding: 0 !important;
+                            > a {
+                                padding: 10px 0;
+                            }
+                        }
+                        .ems-grid-add-cart {
+                            float: right;
+                            clear: both;
+                            padding-left: 0px !important;
+                            > a {
+                                padding: 14px 20px 12px 20px;
+                            }
+                            span {
+                                color: #fff;
+                            }
+                        }
+                        .ems-grid-img {
+                            width: 80px !important;
+                            float: left;
+                            padding: 0 !important;
+                        }
+                    }
+                    .btnTakipListeFiyTumSil {
+                        margin: 0;
+                    }
+                }
+            }
+            .ems-page-default-follow-list, .ems-page-default-favorites  {
+                .btnTakipListeFiyTumSil, .btnTakipListeStokTumSil, .btnFavoriListeTumSil {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

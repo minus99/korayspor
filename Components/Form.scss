@@ -1,0 +1,455 @@
+input[type="text"], input[type="password"], input[type="tel"], input[type="file"], select, textarea, .dropdown > span {
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding:5px 10px;
+    width: 100%;
+    height: 50px;
+    line-height: 23px;
+    color: #000;
+    font-size:15px;
+    font-family: $medium;
+    border-color:$mGray;
+    background: #fff;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 2px;
+    @include transition (all .2s ease-in-out);
+}
+
+ .dropdown > span{
+     cursor: pointer;
+ }
+
+input:disabled {background: #ebebe4;}
+
+span.checkbox{
+    float: left;
+    cursor: pointer;
+    .sStylerMainWrp {
+        display: inline-block;
+        float: left;
+        span.cStyler {
+            cursor: pointer;
+            width: 22px;
+            height: 22px;
+            border: 2px solid $orange;
+            display: inline-block;
+            margin-right: 10px;
+            border-radius: 100%;
+            line-height: 18px;
+            text-align: center;
+            @include transition (background .2s ease);
+            &.checked {
+                width: 22px;
+                height: 22px;
+                background: $orange;
+                &:before {
+                    content: '\e936';
+                    font-family: 'icomoon';
+                    font-size: 12px;                
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.sStylerMainWrp {
+    &.sStylerWrp_select {
+        position: relative;
+        width: 100%;
+        display: inline-block; 
+        .sStylerWrp {
+            line-height: 1;
+            height: 50px; 
+            color: #000;
+            position: relative;
+            padding:5px 10px;
+            border-color:$inputborder;
+            border-style: solid;
+            background: #fff;
+            border-width: 1px 1px 1px 1px;
+            border-radius: 2px; 
+            padding: 18px 15px 18px 15px;
+            font-size:15px;
+            font-family: $medium;
+            @include transition (all .2s ease-in-out);
+            &:after{
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                line-height: 1;
+                margin-top: -3.5px;
+                content: "\e904";
+                font-size: 10px;
+                font-family: 'icomoon';
+            }
+        }
+    }
+    select {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 100%!important;
+        height: 100%;
+        cursor: pointer;
+        padding: 5px 20px;
+        option {
+            padding: 10px 0;
+            font-size:15px;
+            font-family: $medium;
+        }
+    }
+}
+
+&.is-completed{
+    .sStylerMainWrp.sStylerWrp_select {
+        .ems-form-label{
+            top: 7px;
+            line-height: 15px;
+            font-size: 10px;
+            color:$aGray;
+        }
+        .sStylerWrp {
+            height: 50px; 
+            color:$Gray42; 
+            font-size: 14px; 
+            padding: 20px 10px 5px 10px;
+            line-height: 20px; 
+        }
+    }
+}
+
+.ems-form {
+    display: block;
+    &-inner {
+        position: relative;
+        .ems-field {
+            margin-bottom: 10px;
+            position: relative;
+            .ems-form-label {                
+                font-family: $medium;
+                font-size: 16px;
+                line-height: 30px;
+                color: #000;
+                position: absolute;
+                top: 10px;
+                left: 0;
+                padding-left: 10px;
+                pointer-events: none;
+                z-index: 1;
+                @include transition (all .2s ease-in-out);
+                &:empty {
+                    display: none;
+                }
+                .ems-form-obj {
+                    &:empty {
+                        display: none;
+                    }
+                }
+            }
+            &.is-completed{
+                .ems-form-label{
+                    top: 7px;
+                    line-height: 15px;
+                    font-size: 12px;
+                    color:$aGray;
+                }
+                .ems-form-obj {
+                    input { 
+                        height: 50px; 
+                        color:$Gray42; 
+                        font-size: 15px; 
+                        padding-top: 20px; 
+                        line-height: 1; }
+                }
+                &.mobile-phone {
+                    .ems-form-label {
+                        top: 0;
+                        left:0;
+                    }
+                    .ems-form-obj{
+                        input{padding-top:5px; transition:none;}
+                    }
+                }
+            }
+            &.mobile-phone {
+                .ems-form-label {
+                    line-height: 15px;
+                    font-size: 12px;
+                    color:$aGray;
+                    transition: none;
+                    position: inherit;
+                    top:0;
+                    left:0;
+                    padding-bottom: 10px;
+                }
+            }
+            .ems-field:empty {
+                display: none;
+            }
+            .ems-form-desc{
+                font-size: 13px;
+                line-height: 1;
+                color: #bebebe;
+                min-width: 115px;
+                margin-bottom: 15px;
+                &:empty {
+                    display: none;
+                }
+            }
+            .ems-form-obj {
+                margin-bottom: 10px;
+                &:empty {
+                    display: none;
+                }
+                table{ display:table !important; width:100%; }
+                .g-recaptcha{ display: none; }
+            }
+            textarea{resize: none;}
+            .ems-form-obj-alternate {
+                margin-left: 0;
+                /*margin-right: 115px;*/
+            }
+            .ems-form-obj-captcha{
+                > div:last-child{
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    img {
+                        order: 3;
+                        float: left;
+                        width: 49%;
+                    }
+                    span{
+                        order: 1;
+                        font-size: 13px;
+                        color: #727272;
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        position: absolute;
+                        margin-bottom: 10px;
+                        left: 10px;
+                        top: 6px;
+                    }
+                    input{
+                        order: 2;
+                        width: 49%;
+                        float: right;
+                        margin-right: 2%;
+                    }
+                    br{display: none; }
+                }
+            }
+            &-center{
+                text-align: center;
+            }
+            &-submit{
+                margin-bottom: 0;
+            }
+            &-left{
+                text-align: left;
+            }
+            .full{
+                max-width: 100% !important;
+            }
+            .marginBottom0 {
+                margin-bottom: 0;
+            }
+            .marginLeft0 {
+                margin-left: 0;
+            }
+            .margin2 {
+                margin-bottom: (10px / 2);
+            }
+            .vam {
+                > * {
+                    vertical-align: middle;
+                }
+            }
+            .w98 {
+                > * {
+                    width: 49%;
+                    &:first-child {
+                        margin-right: 2%;
+                    }
+                }
+            }
+            &-password-forget{
+                .ems-form-obj{
+                    margin-bottom: 10px;
+                }
+            }
+            &-submit{
+            .ems-form-obj{
+                margin-bottom: 0;
+                    a.btnYeniUyeKaydet{ 
+                        max-width: 250px;
+                        margin: 30px auto 0 auto;
+                        display: block; 
+                    }
+                }
+            }
+            &-other{
+                .ems-form-obj{
+                    text-align:center;
+                    color:$Gray42;
+                    font-size:13px;
+                    margin:20px;
+                }
+            }
+            &-remember{
+                display: inline-block;
+                span.sStylerMainWrp{
+                    display: inline-block;
+                    float: left;
+                    span.cStyler {
+                        cursor: pointer;
+                        background: #fff;
+                        display: inline-block;
+                        margin-right: 10px;
+                        border-radius: 3px;
+                        border: 2px solid $mGray;
+                        padding: 5px;
+                        position: relative;
+                        top: 1px;
+                        &.checked {
+                            background: $orange;
+                            box-shadow: inset 0px 0px 0px 1px #fff;
+                            border-color: $orange;
+                        }
+                    }
+                }
+                .ems-form-obj{
+                    margin-top: 20px;
+                    span[id$="lbfUYE_BENIHATIRLA_FL"]{ font-size: 13px; color: #727272; }
+                }
+            }
+            &-checkbox{
+                .ems-form-obj{
+                    margin-bottom: 20px;
+                    span:last-child{
+                        color: #000;
+                        font-size: 15px;
+                        line-height: 18px;
+                        > a{
+                            color: $lDark;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            &-google{
+                display: none;
+            }
+            &-checkout {
+                margin-top: 10px;
+                #lnkGuestCheckout {
+                    &:hover {
+                        background: $btnAlternateColor;
+                    }
+                }
+            }
+            &-hidden{
+                display: none;
+            }
+            &.district {
+                .ems-form-label {
+                    top: 7px;
+                    line-height: 15px;
+                    font-size: 12px;
+                    color: #8c8c8c;
+                }
+                .sStylerWrp {
+                    padding: 20px 10px 5px 10px;
+                    line-height: 20px;
+                }
+            }
+        }
+        .ems-field:empty {
+            display: none;
+        }
+        [id$="plhLoginSifreUnut1"] {
+            text-align: right;
+            font-size: 13px;
+            color: #bebebe;
+            text-decoration: underline;
+        }
+        input[id$="CEPTELEFONALAN"] {
+            width: 20% !important;
+            text-align: center;
+        }
+        input[id$="CEPTELEFONALAN"] + input[id$="CEPTELEFON"] {
+            width: 75% !important;
+            float: right;
+        }
+        .ems-login-error {
+            span {
+                font-size: 14px;
+                color: #fff;
+                padding: 15px;
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+
+    input[type="text"], input[type="password"], input[type="file"], select, textarea, .dropdown > span {
+        /*height: 45px;
+        line-height: 33px;*/
+    }
+    
+    .sStylerMainWrp {
+        &.sStylerWrp_select {
+            .sStylerWrp {
+                /*line-height: 33px; 
+                height: 45px;*/
+                padding: 15px 5px 12px 5px;
+            }
+        }
+    }
+
+    .ems-form{
+        &-inner{
+            .ems-field{
+                .ems-form-label{
+                    /*line-height: 42px;*/
+                }
+                /*.ems-form-obj-captcha{
+                    > div:last-child{
+                        flex-wrap: wrap;
+                        align-items: center;
+                        img {order: 2; margin-top: 10px; margin-left: 10px;}
+                        span{order: 1;}
+                    }
+                }*/
+            }
+        }
+    }
+    .ems-page {
+        &.ems-page-member {
+            .page-top-title {
+                display: none;
+            }
+        }
+        .page-top-desc {
+            padding-bottom: 20px;
+            margin-top: 0;
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+    .ems-page-default {
+        .ems-login {
+            input {
+                background: $lGray !important;
+            }
+        }
+    } 
+}

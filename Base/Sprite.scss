@@ -1,0 +1,332 @@
+@include fontFace('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
+@include fontFace2('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
+@include fontFace3('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
+@include fontFace4('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
+@include fontFace5('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ico_beden:before {
+  content: "\e962";
+}
+.icon-ico_money:before {
+  content: "\e963"; 
+} 
+.icon-ico_bicyele:before {
+  content: "\e95e";
+}
+.icon-ico_glove:before {
+  content: "\e95f";
+}
+.icon-ico_tool:before {
+  content: "\e960";
+}
+.icon-ico_yoga:before {
+  content: "\e961";
+}
+.icon-ico_manChild:before {
+  content: "\e95d";
+}
+
+.icon-ico_manChild:before {
+  content: "\e95d";
+}
+.icon-ico_cocuk:before {
+  content: "\e957";
+}
+.icon-ico_defans:before {
+  content: "\e958";
+}
+.icon-ico_kale:before {
+  content: "\e959";
+}
+.icon-ico_marka:before {
+  content: "\e95a";
+}
+.icon-ico_orta:before {
+  content: "\e95b";
+}
+.icon-ico_seviye:before {
+  content: "\e95c";
+}
+.icon-ico_dengeli:before {
+  content: "\e955";
+}
+.icon-ico_normal:before {
+  content: "\e956";
+}
+.icon-ico_asfalt:before {
+  content: "\e950";
+}
+.icon-ico_yaris:before {
+  content: "\e951";
+}
+.icon-ico_360:before {
+  content: "\e942";
+}
+.icon-ico_dis:before {
+  content: "\e943";
+}
+.icon-ico_duz:before {
+  content: "\e944";
+}
+.icon-ico_field:before {
+  content: "\e945";
+}
+.icon-ico_ic:before {
+  content: "\e946";
+}
+.icon-ico_kavis:before {
+  content: "\e947";
+}
+.icon-ico_man:before {
+  content: "\e948";
+}
+.icon-ico_player:before {
+  content: "\e94b";
+}
+.icon-ico_result:before {
+  content: "\e94c";
+}
+.icon-ico_toprak:before {
+  content: "\e94d";
+}
+.icon-ico_unisex:before {
+  content: "\e94e";
+}
+.icon-ico_weight:before {
+  content: "\e94f";
+}
+.icon-ico_woman:before {
+  content: "\e952";
+}
+.icon-ico_amator:before {
+  content: "\e93d";
+}
+.icon-ico_amator:before {
+  content: "\e93d"; 
+}
+.icon-ico_elite:before {
+  content: "\e93e";
+}
+.icon-ico_phone:before {
+  content: "\e93f";
+}
+.icon-ico_prof:before {
+  content: "\e940";
+}
+.icon-ico_yProf:before {
+  content: "\e941";
+}
+.icon-ico_basket-tiny:before {
+  content: "\e937";
+}
+.icon-ico_cart:before {
+  content: "\e938";
+}
+.icon-ico_edit:before {
+  content: "\e939";
+}
+.icon-ico_heart:before {
+  content: "\e93a";
+}
+.icon-ico_heart-border:before {
+  content: "\e93b";
+}
+.icon-ico_ok:before {
+  content: "\e93c";
+}
+.icon-ico_check:before {
+  content: "\e936";
+}
+.icon-ico_pass:before {
+  content: "\e931";
+}
+.icon-ico_hali:before {
+  content: "\e92c";
+}
+.icon-ico_kapali:before {
+  content: "\e92d";
+}
+.icon-ico_kuru:before {
+  content: "\e92e";
+}
+.icon-ico_sunni:before {
+  content: "\e92f";
+}
+.icon-ico_yumusak:before {
+  content: "\e930";
+}
+.icon-ico_arrow-bottom:before {
+  content: "\e900";
+}
+.icon-ico_arrow-left:before {
+  content: "\e901";
+}
+.icon-ico_arrow-right:before {
+  content: "\e902";
+}
+.icon-ico_arrow-top:before {
+  content: "\e903";
+}
+.icon-ico_arw-bottom:before {
+  content: "\e904";
+}
+.icon-ico_arw-left:before {
+  content: "\e905";
+}
+.icon-ico_arw-right:before {
+  content: "\e906";
+}
+.icon-ico_arw-top:before {
+  content: "\e907";
+}
+.icon-ico_bank:before {
+  content: "\e908";
+}
+.icon-ico_basket:before {
+  content: "\e909";
+}
+.icon-ico_breadcrumb:before {
+  content: "\e90a";
+}
+.icon-ico_close:before {
+  content: "\e90b";
+}
+.icon-ico_remove:before {
+  content: "\e90b";
+}
+.icon-ico_detail1:before {
+  content: "\e90c";
+}
+.icon-ico_detail2:before {
+  content: "\e90d";
+}
+.icon-ico_detail3:before {
+  content: "\e90e";
+}
+.icon-ico_discont1:before {
+  content: "\e90f";
+}
+.icon-ico_facebook:before {
+  content: "\e910";
+}
+.icon-ico_g-plus:before {
+  content: "\e911";
+}
+.icon-ico_instagram:before {
+  content: "\e912";
+}
+.icon-ico_market:before {
+  content: "\e913";
+}
+.icon-ico_menu1:before {
+  content: "\e914";
+}
+.icon-ico_menu2:before {
+  content: "\e915";
+}
+.icon-ico_menu3:before {
+  content: "\e916";
+}
+.icon-ico_menu4:before {
+  content: "\e917";
+}
+.icon-ico_menu5:before {
+  content: "\e918";
+}
+.icon-ico_menu6:before {
+  content: "\e919";
+}
+.icon-ico_menu7:before {
+  content: "\e91a";
+}
+.icon-ico_menu8:before {
+  content: "\e91b";
+}
+.icon-ico_minus:before {
+  content: "\e91c";
+}
+.icon-ico_packet:before {
+  content: "\e91d";
+}
+.icon-ico_packet-change:before {
+  content: "\e91e";
+}
+.icon-ico_pinterest:before {
+  content: "\e91f";
+}
+.icon-ico_plus:before {
+  content: "\e920";
+}
+.icon-ico_search:before {
+  content: "\e921";
+}
+.icon-ico_speaker:before {
+  content: "\e922";
+}
+.icon-ico_sport1:before {
+  content: "\e923";
+}
+.icon-ico_sport2:before {
+  content: "\e924";
+}
+.icon-ico_sport3:before {
+  content: "\e925";
+}
+.icon-ico_sport4:before {
+  content: "\e926";
+}
+.icon-ico_sport5:before {
+  content: "\e927";
+}
+.icon-ico_sport6:before {
+  content: "\e928";
+}
+.icon-ico_sport7:before {
+  content: "\e929";
+}
+.icon-ico_sport8:before {
+  content: "\e92a";
+}
+.icon-ico_tel:before {
+  content: "\e92b";
+}
+.icon-ico_twitter:before {
+  content: "\e932";
+}
+.icon-ico_user:before {
+  content: "\e933";
+}
+.icon-ico_view3:before {
+  content: "\e934";
+}
+.icon-ico_view4:before {
+  content: "\e935";
+}
+
+.ems-icon {
+	position: relative;
+  display:inline-block; 
+  vertical-align:middle; 
+  text-indent:-999em; 
+  transition: all 0.2s ease;
+	font-size: 0px;
+ 	@at-root {
+      .ems-icon { background:url(#{$baseHref + "/images/frontend/sprite.png"}) no-repeat; }
+      .ems-icon-cargo-car { background-position: 0 0; width:28px; height:17px; }
+      .ems-icon-cargo-safe { background-position: -28px 0; width:22px; height:31px; }
+      .ems-icon-cargo-check { background-position: -50px 0; width:28px; height:29px; }
+      .ems-icon-key-sale { background-position: -78px 0; width:44px; height:26px; }
+  }
+}

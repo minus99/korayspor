@@ -1,0 +1,121 @@
+a.btnDefault, .ems-col.ems-col-link a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 5px 15px 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fff;
+    background: $orange;
+    @include linear-gradient(to right, #FF6600 , #0066FF);
+    background-size: 1000% 100%;
+    background-position: 0 0;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: normal;
+    width: 100%;
+    line-height: 1;
+    font-family: $medium;
+    @include transition(all 0.2s ease);
+    transition: all .4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    span {font-size: 15px; /*letter-spacing: .9px;*/ 
+        &:before {
+            display:block;
+            content:"";
+            position:absolute;
+            width:0px;
+            height:0px;
+            border: 5px solid transparent;
+            border-left: 6px solid #fff;
+            top:50%;
+            margin-top:-5px;
+            left:10px;
+            opacity:0;
+            transition:all .3s cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+        }
+    }
+    
+    &:hover {
+        color: #fff;
+        background-position: 100% 0;
+        transition-duration:.4s;
+        span {
+            &:before { 
+              opacity:1; 
+              left:20px; 
+              transition:all .3s cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+            }
+        }
+    }
+    &:active {background: $orange;}
+    @at-root {
+        &-text, a.btnAdresListeGuncelle, a.btnAdresListeSil, a.btnSatisSozlesmeOnizle, a.btnOnBilgilendirmeFormOnizle, a.btnHediyeCekiKullan, a.btnSepeteAtFavori, a.btnStokHaberciFavori, a.btnFavoriListeSil, a.btnTakipListeFiySil, a.btnTakipListeStokSil, a.btnAdresIptal, a.btnIadeDetay, a.btnYorumGonderEvet, a.btnYorumGonderHayir {
+            background: none;
+            padding: 0;
+            font-size: inherit;
+            color: inherit;
+            &:hover {
+                background: inherit;
+            }
+        }
+        &-full, .pageLogin_btnFacebookLogin > table, a.btnFacebookLogin, a.btnYeniUyeKaydet, a.btnLogin, a.btnUyeBilgi, a.btnSifreGuncelle, a.btnIade, a.btnAdresKaydet {
+            width: 100%;
+        }
+        .urunDetay_btnSepeteAt > table, .urunListe_favoriEkle > table, .urunDetay_btnStokHaberci > table, .ems-cart-coupon > table, .pageLogin_btnFacebookLoginKutu > table, .pageLogin_btnFacebookLogin > table, .pageLogin_btnUyeSifreGonder > table {
+            display: table !important;
+            width: 100%;
+        }
+        a.btnFacebookLogin, a.btnFacebookLoginKutu {
+            background: $fbBtnColor;
+            span {
+                color: #fff;
+                .icon-ico_facebook{
+                    float: left;
+                    &:before {
+                        font-size: 18px;
+                        margin-bottom: -10px;
+                        display: inline-block;
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+            }
+            &:hover {
+                background: #000;
+            }
+        }
+    }
+    &.btnDefaultBlack{
+        background: #000;
+        max-width: 225px;
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+    }
+    &.btnDefaultAlternate{
+        background: $btnAlternateColor;
+        &:hover {
+            background: $btnColor;
+        }
+    }
+}
+
+.link-btn{
+    display: inline-block;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: $bold;
+    font-size: 15px;
+    > span, i{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    i{
+        position: relative;
+        top: -2px;
+        margin-left: 10px;
+        &:before{
+            color: #fff;
+            font-size: 11px;
+        }
+    }
+}

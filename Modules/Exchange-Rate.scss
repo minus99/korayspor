@@ -1,0 +1,108 @@
+.kutuKurDegis{ 
+    position: relative;
+    border-left:1px solid $gray;
+    .kutuHeaderKurDegis, .kutuKurDegis_lbfAciklama { display: none; }
+    .kutuKurDegis_pb {
+        @include transition (background-color .2s ease);
+        > span{
+            cursor: pointer;
+            background: none;
+            letter-spacing: .9px;
+            color: #fff;
+            font-size: 14px;
+            border: none;
+            padding: 14px 20px 8px 20px;
+            line-height: inherit;
+            height: inherit;
+            display: inline-block;
+            min-height: 40px;
+            i:before {
+                font-size: 9px;
+                margin-left: 37px;
+                position: relative;
+                top: -2px;
+                color: #fff;
+            }
+            i.icon-ico_arrow-dropdown{
+                font-size: 7px;
+                position: relative;
+                top: -2px;
+                margin-left: 15px;
+                &:before{
+                    font-size: 7px;
+                }
+            }
+        }
+        > ul{
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            z-index: 10;
+            background: $rgbBg;
+            width: 100%;
+            padding: 5px 10px;
+            li{
+                a{
+                    padding: 8px 10px;
+                    display:block;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: normal;
+                    text-align: center;
+                }
+                &:first-child{
+                    a{ border: none; }
+                }
+            }
+        }
+        &.opened{
+            background: $lGray;
+            > span {
+                color: #000;
+                i {
+                    &:before {
+                        content: '\e907' !important;
+                        color: #000;
+                    }
+                }
+            }
+            > ul{ 
+                display: block;
+                background: $lGray;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                li {
+                    a {
+                        color: #000;
+                        font-family: $sbold;
+                        &:hover {
+                            color: $orange; 
+                        }
+                    }
+                    &.selected {
+                        a {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            background: $lGray;
+            > span {
+                color: #000;
+                i {
+                    &:before {
+                        content: '\e904';
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .kutuKurDegis{ /*display: none !important;*/ }
+}
