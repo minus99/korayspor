@@ -974,6 +974,7 @@
     &-brands{
         padding: 20px 0 40px 0;
         /*margin-top: -200px !important;*/
+        overflow: hidden;
         max-width: none;
         .swiper-slide{
             width: 213px;

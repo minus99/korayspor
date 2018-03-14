@@ -119,6 +119,9 @@
                         float: left;
                         margin: 0;
                     }
+                    &.loginCaptcha {
+                        display: inline-block;
+                    }
                }
            }
         }
@@ -236,7 +239,7 @@
             text-align: center;
         }
         .mbBack { 
-            position: fixed;
+            position: absolute;
             font-size: 15px;
             right: 20px;
             top: 23px;

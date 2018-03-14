@@ -13,10 +13,6 @@
         @include transition(background-color .2s ease);
         > span[id$="lbhKUTU_HESABIM"]{
             display: inline-block;
-            /*max-width: 130px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;*/
         }
         i.icon-ico_user {
             &:before {

@@ -238,13 +238,17 @@
     }
 }
 
-.system-widget {
+.system-widget { 
     padding-bottom:40px; 
     margin-bottom:50px; 
     border-bottom: 2px solid $lGray;
     &.mobi-swiper {
         .swiper-pagination {display: none;}
     }
+    ul.emosInfinite .ems-prd .ems-prd-inner {
+        margin: 0 !important;
+    }
+
 }
 
 /* video */

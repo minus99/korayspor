@@ -1,8 +1,4 @@
 @include fontFace('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
-@include fontFace2('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
-@include fontFace3('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
-@include fontFace4('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
-@include fontFace5('icomoon', '/styles/fonts/icon/icomoon', normal, normal);
 
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon' !important;
@@ -14,6 +10,10 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ico_whatsapp:before {
+  content: "\e964";
 }
 
 .icon-ico_beden:before {

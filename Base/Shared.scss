@@ -36,11 +36,11 @@ body { overflow-x: hidden; }
 }
 
 svg {
-	fill: currentColor;
+	fill: currentColor;  
 }
 
 .ems-left {float:left;}
-.ems-right {float:right;}
+.ems-right {float:right;} 
 
 //item list
 [class*="item-"] {
@@ -54,7 +54,7 @@ svg {
 	&.item-3  > * {
 		width: (100% / 3);
 	}
-	&.item-4  > * {
+	&.item-4  > * { 
 		width: 25%;
 	}
 }
@@ -166,7 +166,7 @@ svg {
 		font-family: $regular;
 		margin: 20px 15% 50px 15%;
 		width: 70%;
-		color: $lGray;
+		color: $gray; 
 		background: none;
 	}
 }

@@ -34,11 +34,11 @@
     background: #fff;
     box-shadow: 0 10px 30px 0 rgba(0,0,0,0.2);
     color: #000;
-    padding: 30px 25px 30px 40px;
+    padding: 20px 25px 20px 20px;
     z-index: 1;
-    cursor: pointer;
+    /*cursor: pointer;*/
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     float: right;
     pointer-events: all;
     position: relative;
@@ -47,6 +47,18 @@
 .sc-media-content {
     display: inline-block;
     vertical-align: middle;
+}
+
+
+.sc-media-content {
+    .ems-left {
+        margin-top: 7px;
+    }
+    .mh {
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid #eee;
+    }
 }
 
 .sc-media-content i {
@@ -61,24 +73,25 @@
 .sc-media-content span {
     margin: 0;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 13px;
     font-family: $regular;
-    padding-left: 80px;
+    /*padding-left: 80px;*/
     display: block;
+    color: $mGray;
 }
 
 .sc-media-content b {
     margin: 0;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 18px;
     font-family: $sbold;
-    padding-left: 80px;
+    /*padding-left: 80px;*/
     display: block;
 }
 .sc-media .icon-ico_close {
     position: absolute;
-    top: 11px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
     color: #000;
     cursor: pointer;
     padding: 5px;
@@ -103,9 +116,19 @@
     text-align: center;
     padding: 25px 0;
     display: none;
-    b, span {
+    b {
         text-align: left;
-        font-size: 20px;
+        font-size: 18px;
+    }
+    span {
+        text-align: left;
+        font-size: 13px;
+    }
+    i:before {
+        font-size: 40px;
+    }
+    .ems-left {
+        margin-top: 3px;
     }
 }
 
@@ -260,21 +283,12 @@
  .nivo-lightbox-effect-fall.nivo-lightbox-open .nivo-lightbox-wrap{-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0)}
  /* theme */
  .nivo-lightbox-theme-default.nivo-lightbox-overlay{background:#666;background:rgba(0,0,0,0.6)}
- /*.nivo-lightbox-theme-default .nivo-lightbox-content.nivo-lightbox-loading{background:url(/images/nivo-theme/loading.gif) no-repeat 50% 50%}*/
  .nivo-lightbox-theme-default .nivo-lightbox-content.nivo-lightbox-loading:after{background-image: url(../images/q-logo.png); background-size:cover; width: 40px; height: 40px !important; animation: heartBeat 1.1s infinite ease; z-index: 1; content:""; display:inline-block; visibility:visible; position: absolute; left: 50%; top: 50%; margin: -20px; }
  .nivo-lightbox-theme-default .nivo-lightbox-nav{top:10%;width:8%;height:80%;text-indent:-9999px;background-repeat:no-repeat;background-position:50% 50%;opacity:.5}
  .nivo-lightbox-theme-default .nivo-lightbox-nav:hover{opacity:1;background-color:rgba(0,0,0,0.5)}
- /*.nivo-lightbox-theme-default .nivo-lightbox-prev{background-image:url(/images/nivo-theme/prev.png);border-radius:0 3px 3px 0}
- .nivo-lightbox-theme-default .nivo-lightbox-next{background-image:url(/images/nivo-theme/next.png);border-radius:3px 0 0 3px}*/
  .nivo-lightbox-theme-default .nivo-lightbox-close{display:block; width:45px; height:45px;}
  .nivo-lightbox-theme-default .nivo-lightbox-close:hover{opacity:1}
  .nivo-lightbox-theme-default .nivo-lightbox-title-wrap{}
  .nivo-lightbox-theme-default .nivo-lightbox-title{font:14px/20px 'Helvetica Neue',Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;background:#000;color:#fff;padding:7px 15px;border-radius:30px}
  .nivo-lightbox-theme-default .nivo-lightbox-image img{background:#fff;-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.4);-moz-box-shadow:0 1px 1px rgba(0,0,0,0.4);box-shadow:0 1px 1px rgba(0,0,0,0.4)}
  .nivo-lightbox-theme-default .nivo-lightbox-ajax,.nivo-lightbox-theme-default .nivo-lightbox-inline{background:#fff;padding:40px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.4);-moz-box-shadow:0 1px 1px rgba(0,0,0,0.4);box-shadow:0 1px 1px rgba(0,0,0,0.4)}
- /*@media (-webkit-min-device-pixel-ratio: 1.3),(-o-min-device-pixel-ratio: 2.62),(min--moz-device-pixel-ratio: 1.3),(min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx) {
- .nivo-lightbox-theme-default .nivo-lightbox-content.nivo-lightbox-loading{background-image:url(/images/nivo-theme/loading@2x.gif);background-size:32px 32px}
- .nivo-lightbox-theme-default .nivo-lightbox-prev{background-image:url(/images/nivo-theme/prev@2x.png);background-size:48px 48px}
- .nivo-lightbox-theme-default .nivo-lightbox-next{background-image:url(/images/nivo-theme/next@2x.png);background-size:48px 48px}
- .nivo-lightbox-theme-default .nivo-lightbox-close{background-image:url(/images/nivo-theme/close@2x.png);background-size:16px 16px}
- }*/

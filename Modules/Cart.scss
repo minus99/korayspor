@@ -23,6 +23,7 @@
     -webkit-justify-content: space-between; /* Safari 6.1+ */
     display: flex;
     justify-content: space-between;
+    align-items: left;  
 }
 
 .ems-page-cart-colmn {
@@ -520,6 +521,46 @@
     }
 }
 
+.gridSepetStok {
+        box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.3);
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    .pageErrorStokKontrol {
+        color:#f00;
+        padding:20px
+}
+    
+span[id$="lbfUyeKartBilgi"] {display:none;}
+
+.pageCepTelDogrulama {
+    display: inline-block !important;
+    .telDogrulamaGonder { 
+        display: block;
+        > span {
+            font-family: $sbold;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        .telDogrulamaTelInput {  
+            input {
+                padding: 5px;
+                font-size: 18px;
+            }
+            margin-bottom: 20px;
+        }
+        .telDogrulamaGonder {
+            a {
+                background: $orange;
+                color:#fff;
+                padding: 15px 20px;
+
+            }
+        }
+    }
+}
+
+
 .cart-section-right {
     width: 100%;
     position: relative;
@@ -538,7 +579,7 @@
         .pnlDipToplamTable {
             tr {
                 font-family: $medium; 
-                &.pnlDipToplam_bankaKomisyon, &.pnlDipToplam_kulBankaBonus {display: none;}
+                &.pnlDipToplam_bankaKomisyon {display: none;} 
                 &.pnlDipToplam_indirimToplam {
                     color: $orange !important;
                 }
@@ -701,7 +742,7 @@
                 width: 100%;
                 padding: 0;
                 height: 35px;
-                pointer-events: none;
+                /*pointer-events: none;*/
                 &:hover {
                     span {
                         &:before {
@@ -729,7 +770,7 @@
                 width: 100%;
                 padding: 0;
                 height: 35px;
-                pointer-events: none;
+                /*pointer-events: none;*/
                 &:hover {
                     span {
                         &:before {
@@ -1440,6 +1481,7 @@
     display: table;
     padding: 0;
     margin: 0 auto;
+    width: 100%;
     .page-top-title, .page-top-desc {
         display: none;
     }
@@ -1503,10 +1545,14 @@
             
             }
             .pageOdemeBilgi_chkBankaBonus {
-                padding: 20px;
+                padding: 15px;
                 border-top: 1px solid $inputborder;
                 display: inline-block;
                 width: 100%;
+                .ftpPuanKazan {
+                    margin-top: 5px;
+                    font-size: 13px;
+                }
             }
         }
         
@@ -1653,7 +1699,7 @@
             vertical-align: top;
             width: 50%;
             padding: 30px 20px 20px 20px;
-            margin-left: -2px;
+            margin-left: 0px;
             position: relative;
             z-index: 1;
             background-color: white;
@@ -1697,7 +1743,33 @@
                 }
                 .taksit_pesin td {
                     color: $lDark;
-
+                    font-family: $medium;
+                    .rStyler { 
+                        cursor: pointer;
+                        width: 22px;
+                        height: 22px;
+                        border: 2px solid #ff6600;
+                        display: inline-block;
+                        margin-right: 10px;
+                        border-radius: 100%;
+                        line-height: 18px;
+                        text-align: center;
+                        @include transition (background .2s ease);
+                        &.checked {
+                            width: 22px;
+                            height: 22px;
+                            background: #ff6600;
+                            &:before {
+                                content: '\e936';
+                                font-family: 'icomoon';
+                                font-size: 12px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    input {
+                        display: none !important;
+                    }
                 }
             }
         }
@@ -1731,6 +1803,17 @@
                     max-width: 400px;
                     height: 100px;
                     resize: none;
+                }
+                &:after {
+                    content: 'Ücretsiz Kargo';
+                    width: 120px;
+                    background:url(#{$baseHref + "/images/nakLogo/nakImg167.jpg"}) center center no-repeat rgba(255,255,255,.5);
+                    display: inline-block;
+                    float: right;
+                    padding-bottom: 50px;
+                    font-family: bold;
+                    text-align: center;
+                    margin-top: 25px;
                 }
             }
         }
@@ -1850,58 +1933,6 @@
     
     .ems-cart-agreement {
         display: none;
-        /*
-        span {
-            font-size: 13px;
-            color: $lGray;
-            line-height: 20px;
-            display: table;
-            overflow-x: hidden !important;
-            u {
-                cursor: pointer;
-                &:hover {
-                    color: $lDark;
-                }
-            }
-        }
-        .tableTitleDefault {display: none;}
-        table {display: none !important;}
-        .onBilgilendirmeForm {
-            display: inline-block;
-            width: 100%;
-            margin-bottom: 15px;
-            .onBilgilendirmeFormMetin {
-                display: none;
-            }
-            &.opened {
-                .onBilgilendirmeFormMetin {
-                    display: block;
-                    margin-bottom: 20px;
-                    border: 1px solid #ddd;
-                    padding: 10px;
-                }
-            }
-        }
-        .siparisOnaySozlesme {
-            display: inline-block;
-            width: 100%;
-            .siparisOnaySozlesmeMetin {
-                display: none;
-            }
-            &.opened {
-                .siparisOnaySozlesmeMetin {
-                    display: block;
-                    margin-bottom: 20px;
-                    border: 1px solid #ddd;
-                    padding: 10px;
-                }
-            }
-            
-        }
-        .opened {
-            display: block;
-        }
-        */
     }
     .ems-cart-pay-adress {
         float: left;
@@ -2152,6 +2183,9 @@
         }
     }
 }
+
+.en-US .ems-page-order-payment .ems-cart-pay-type .ems-pay-other .OdemeBilgiPesinDigerOdemeNotu:after {display: none;}
+.ru-RU .ems-page-order-payment .ems-cart-pay-type .ems-pay-other .OdemeBilgiPesinDigerOdemeNotu:after {display: none;}
 
 /* Sipariş Sonuç */
     
@@ -2484,6 +2518,9 @@
         }
     }
 
+    .en-US .cart-section-left .ems-grid-default .ems-grid-row .ems-grid-delete i:before {content:'REMOVE'}
+    .ru-RU .cart-section-left .ems-grid-default .ems-grid-row .ems-grid-delete i:before {content:'СНИМАТЬ'}
+
     /* Teslimat */
 
     .ems-page-order-delivery {
@@ -2634,6 +2671,23 @@
                 }
             }
             textarea {max-width: none !important;}
+
+            .ems-pay-other {
+                .OdemeBilgiPesinDigerOdemeNotu {
+                    &:after {
+                        content: 'Ücretsiz Kargo';
+                        height: 53px;
+                        background:url(#{$baseHref + "/images/nakLogo/nakImg167.jpg"}) right center no-repeat rgba(255,255,255,.5);
+                        display: inline-block;
+                        float: left;
+                        padding:0 120px 0 0;
+                        font-family: bold;
+                        text-align: center;
+                        margin: 20px 0;
+                        line-height: 50px;
+                    }
+                }
+            }
         }
         .ems-cart-pay-tab {
             ul {

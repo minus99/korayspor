@@ -1,7 +1,5 @@
 .ems-page{
     &-detail {
-        /*padding-top:10px;
-        padding-bottom: 30px;*/
         .ems-pay-info{margin:55px 0;}
         .system-widget {
             background: $wbg;
@@ -493,6 +491,7 @@ body.suggestions-popup-ready{
             font-size: 15px;
             color: #000;
             /*margin-bottom: 10px;*/
+            font-family: $medium;
             &:empty{ display: none; }
         }
         &-product-code {display: none;}
@@ -619,24 +618,9 @@ body.suggestions-popup-ready{
                                 width: 100%;
                                 image-rendering: -webkit-optimize-contrast;
                             }
-                            /*&:after{
-                                content:'';
-                                position: absolute;
-                                bottom: 0;
-                                width: 100%;
-                                left: 0;
-                                height: 3px;
-                                display: inline-block;
-                                background: $btnColor;
-                                @include setTransform(translateY(5px));
-                                @include transition(transform .2s ease-in-out);
-                            }*/
                         }
                         &:hover, &.selected {
                             .URN_RESIM{
-                                /*&:after{
-                                    @include setTransform(translateY(0));
-                                }*/
                                 border-color: $orange;
                             }
                         }
@@ -748,6 +732,9 @@ body.suggestions-popup-ready{
                         background: $gray;
                     }
                 }
+            }
+            &.show {
+                display: block;
             }
         }
 
@@ -1684,6 +1671,160 @@ body.suggestions-popup-ready{
     }
 }
 
+.ems-prd-detail {
+        .ems-prd-zoom {
+            &:before {
+                content:'';
+                font-family: 'icomoon';
+                font-size: 32px;
+                color: $orange;
+                display: inline-block;
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                z-index: 9;
+            }
+            &:after {
+                font-size: 12px;
+                display: block;
+                color: $orange;
+                position: absolute;
+                right: 20px;
+                top: 45px;
+                z-index: 9;
+                width: 20px;
+                display: flex;
+                justify-content: center;
+                white-space: nowrap;
+            }
+        }
+        &.amator {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'\e93d';
+                }
+                &:after {
+                    content:'Amatör'
+                }
+            }
+        } 
+        &.yProf {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'\e941';
+                }
+                &:after {
+                    content:'Yarı Prof'
+                }
+            }
+        } 
+        &.prof {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'\e940';
+                }
+                &:after {
+                    content:'Prof'
+                }
+            }
+        } 
+        &.elit {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'\e93e';
+                }
+                &:after {
+                    content:'Elit'
+                }
+            }
+        } 
+    
+        &.goretex {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'';
+                    width: 45px;
+                    height: 32px;
+                    display: inline-block;
+                    background:url(#{$baseHref + "/images/ozellikler/ico-goretex.png"}) repeat-x;
+                }
+            }
+        }
+    
+        &.gritex {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'';
+                    width: 45px;
+                    height: 32px;
+                    display: inline-block;
+                    background:url(#{$baseHref + "/images/ozellikler/ico-gritex.png"}) repeat-x;
+                }
+            }
+        }
+    
+        &.spotex {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'';
+                    width: 45px;
+                    height: 32px;
+                    display: inline-block;
+                    background:url(#{$baseHref + "/images/ozellikler/ico-spotex.png"}) repeat-x;
+                }
+            }
+        }
+    
+        &.sympatex {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'';
+                    width: 45px;
+                    height: 32px;
+                    display: inline-block;
+                    background:url(#{$baseHref + "/images/ozellikler/ico-sympatex.png"}) repeat-x;
+                }
+            }
+        }
+    
+        &.water {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'';
+                    width: 45px;
+                    height: 32px;
+                    display: inline-block;
+                    background:url(#{$baseHref + "/images/ozellikler/ico-water.png"}) repeat-x;
+                }
+            }
+        }
+    
+        &.waterRes {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'';
+                    width: 45px;
+                    height: 32px;
+                    display: inline-block;
+                    background:url(#{$baseHref + "/images/ozellikler/ico-waterRes.png"}) repeat-x;
+                }
+            }
+        }
+    
+        &.kaztuyu {
+            .ems-prd-zoom { 
+                &:before {
+                    content:'';
+                    width: 45px;
+                    height: 32px;
+                    display: inline-block;
+                    background:url(#{$baseHref + "/images/ozellikler/ico-kaztuyu.png"}) repeat-x;
+                }
+            }
+        }
+    
+}
+
 .en-US .ems-prd-detail .ems-prd-discount-rate, .ru-RU .ems-prd-detail .ems-prd-discount-rate, .en-US .ems-prd-detail .ems-prd-price-taksit, .ru-RU .ems-prd-detail .ems-prd-price-taksit {display: none;}
 .en-US .ems-prd-detail .ems-prd-price-kargo, .ru-RU .ems-prd-detail .ems-prd-price-kargo {float: left; margin: 5px 0 0 0px; text-align: left;}
 .en-US .ems-prd-detail .ems-prd-size .dropdown-trigger > span:before {content: 'Number ';}
@@ -2018,7 +2159,7 @@ body.suggestions-popup-ready{
 
     .ems-prd-zoom {
         &:after {
-            box-shadow: inset 2px 4px 2px -1px rgba(0, 0, 0, 0.08); 
+            /*box-shadow: inset 2px 4px 2px -1px rgba(0, 0, 0, 0.08); */
             content: '';
             display: block;
             height: 10px;
@@ -2100,7 +2241,18 @@ body.suggestions-popup-ready{
         }
         .ems-prd {
             &-detail-top {
-                display:none;
+                /*display:none;*/
+                .ems-prd-product-code {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    font-size: 13px;
+                    font-family: $bold;
+                    span {
+                        display: inline-block; 
+                        margin-right: 5px;
+                    }
+                }
             }
             &-icons{
                 &-alternate{ display: none; }

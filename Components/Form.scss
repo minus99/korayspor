@@ -98,12 +98,12 @@ span.checkbox{
         option {
             padding: 10px 0;
             font-size:15px;
-            font-family: $medium;
+            font-family: $medium;  
         }
     }
 }
 
-&.is-completed{
+.is-completed{ 
     .sStylerMainWrp.sStylerWrp_select {
         .ems-form-label{
             top: 7px;
@@ -355,7 +355,7 @@ span.checkbox{
             &-hidden{
                 display: none;
             }
-            &.district {
+            &.district, &.parish {
                 .ems-form-label {
                     top: 7px;
                     line-height: 15px;
@@ -398,36 +398,11 @@ span.checkbox{
 }
 
 @media screen and (max-width: $breakpointXSM){
-
-    input[type="text"], input[type="password"], input[type="file"], select, textarea, .dropdown > span {
-        /*height: 45px;
-        line-height: 33px;*/
-    }
     
     .sStylerMainWrp {
         &.sStylerWrp_select {
             .sStylerWrp {
-                /*line-height: 33px; 
-                height: 45px;*/
                 padding: 15px 5px 12px 5px;
-            }
-        }
-    }
-
-    .ems-form{
-        &-inner{
-            .ems-field{
-                .ems-form-label{
-                    /*line-height: 42px;*/
-                }
-                /*.ems-form-obj-captcha{
-                    > div:last-child{
-                        flex-wrap: wrap;
-                        align-items: center;
-                        img {order: 2; margin-top: 10px; margin-left: 10px;}
-                        span{order: 1;}
-                    }
-                }*/
             }
         }
     }

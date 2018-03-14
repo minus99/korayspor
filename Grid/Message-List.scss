@@ -66,6 +66,9 @@
     }
 }
 
+.en-US .ems-page-member .ems-grid-message .ems-grid-row.newMessage .col-2:before {content:'NEW';}
+.ru-RU .ems-page-member .ems-grid-message .ems-grid-row.newMessage .col-2:before {content:'НОВЫЙ';}
+
 .ems-page-default{
     &-message-detail{
         .ems-message-type, .msgDtHeader, .msgDtContent{

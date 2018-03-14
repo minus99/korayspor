@@ -1,52 +1,4 @@
-@mixin fontFace5($family, $url, $fontWeight: normal, $fontStyle: normal) {
-	@font-face {
-		font-family: $family;
-		src: url(#{$baseHref5 + $url + '.eot'});
-		src: url(#{$baseHref5 + $url + '.eot?#iefix'}) format('embedded-opentype'), 
-			 url(#{$baseHref5 + $url + '.woff'}) format('woff'),
-			 url(#{$baseHref5 + $url + '.ttf'}) format('truetype');
-		font-weight: $fontWeight;
-		font-style: $fontStyle;
-	}
-}
-
-@mixin fontFace4($family, $url, $fontWeight: normal, $fontStyle: normal) {
-	@font-face {
-		font-family: $family;
-		src: url(#{$baseHref4 + $url + '.eot'});
-		src: url(#{$baseHref4 + $url + '.eot?#iefix'}) format('embedded-opentype'), 
-			 url(#{$baseHref4 + $url + '.woff'}) format('woff'),
-			 url(#{$baseHref4 + $url + '.ttf'}) format('truetype');
-		font-weight: $fontWeight;
-		font-style: $fontStyle;
-	}
-}
-
-@mixin fontFace3($family, $url, $fontWeight: normal, $fontStyle: normal) {
-	@font-face {
-		font-family: $family;
-		src: url(#{$baseHref3 + $url + '.eot'});
-		src: url(#{$baseHref3 + $url + '.eot?#iefix'}) format('embedded-opentype'), 
-			 url(#{$baseHref3 + $url + '.woff'}) format('woff'),
-			 url(#{$baseHref3 + $url + '.ttf'}) format('truetype');
-		font-weight: $fontWeight;
-		font-style: $fontStyle;
-	}
-}
-
-@mixin fontFace2($family, $url, $fontWeight: normal, $fontStyle: normal) {
-	@font-face {
-		font-family: $family;
-		src: url(#{$baseHref2 + $url + '.eot'});
-		src: url(#{$baseHref2 + $url + '.eot?#iefix'}) format('embedded-opentype'), 
-			 url(#{$baseHref2 + $url + '.woff'}) format('woff'),
-			 url(#{$baseHref2 + $url + '.ttf'}) format('truetype');
-		font-weight: $fontWeight;
-		font-style: $fontStyle;
-	}
-}
-
-@mixin fontFace($family, $url, $fontWeight: normal, $fontStyle: normal) {
+@mixin fontFace($family, $url, $fontWeight: normal, $fontStyle: normal) { 
 	@font-face {
 		font-family: $family;
 		src: url(#{$baseHref + $url + '.eot'});
@@ -55,7 +7,7 @@
 			 url(#{$baseHref + $url + '.ttf'}) format('truetype');
 		font-weight: $fontWeight;
 		font-style: $fontStyle;
-	}
+	} 
 }
 
 @mixin setAbsolute {
