@@ -88,6 +88,8 @@
     }
 }
 
+_:-ms-fullscreen, :root .ems-page-cart-colmn-3 { max-width: 500px; }
+
 .sepetLogo {
     position: absolute;
     left: 0;
@@ -577,11 +579,40 @@ span[id$="lbfUyeKartBilgi"] {display:none;}
             display: block;
         }
         .pnlDipToplamTable {
+            tbody {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; 
+            }
             tr {
-                font-family: $medium; 
+                font-family: $medium;
+                display: flex;
+                justify-content: space-between; 
                 &.pnlDipToplam_bankaKomisyon {display: none;} 
                 &.pnlDipToplam_indirimToplam {
                     color: $orange !important;
+                }
+                &.pnlDipToplam_araToplam {
+                    order: 1;
+                }
+                
+                &.pnlDipToplam_kargoTutar {
+                    order: 2;
+                }
+                &.pnlDipToplam_kulBankaBonus {
+                    order: 3;
+                }
+                &.pnlDipToplam_indirimToplam {
+                    order: 4;
+                }
+                &.pnlDipToplam_kulBonusPara {
+                    order: 5;
+                }
+                &.pnlDipToplam_sipToplam {
+                    order: 6;
+                }
+                &.emos_invisible {
+                    display: none;
                 }
             }
             th {
@@ -590,6 +621,10 @@ span[id$="lbfUyeKartBilgi"] {display:none;}
                 text-align: left;
                 line-height: 33px;
                 white-space: nowrap;
+            }
+            td {
+                line-height: 33px;
+                float: right;
             }
             .pnlDipToplam_sipToplam {
                 td, th {

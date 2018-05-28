@@ -4540,6 +4540,12 @@ span.checkbox {
     bottom: 0;
     opacity: 1; }
 
+.main-slider .swiper-controller-content ul li.selected .left-layout {
+  bottom: 48% !important; }
+
+.main-slider .swiper-controller-content ul li.selected .right-layout {
+  bottom: 48% !important; }
+
 .swiper-container-autoheight,
 .swiper-container-autoheight .swiper-slide {
   height: auto; }
@@ -5061,6 +5067,8 @@ button.swiper-pagination-bullet {
       right: 0;
       left: 0;
       height: 100%; }
+      .main-slider .swiper-control-wrp .swiper-controller-content ul li.selected .left-layout, .main-slider .swiper-control-wrp .swiper-controller-content ul li.selected .right-layout {
+        bottom: 0 !important; }
     .main-slider .swiper-control-wrp .swiper-pagination {
       bottom: 10px;
       padding: 0px 0 !important; }
@@ -5130,9 +5138,11 @@ button.swiper-pagination-bullet {
           -o-transition-delay: inherit !important;
           transition-delay: inherit !important; }
       .main-slider .swiper-control-wrp .content-wrapper.right-layout {
-        right: 0 !important; }
+        right: 0 !important;
+        bottom: 0 !important; }
       .main-slider .swiper-control-wrp .content-wrapper.left-layout {
-        left: 0 !important; }
+        left: 0 !important;
+        bottom: 0 !important; }
     .main-slider .swiper-slide .swiper-img {
       min-height: 410px !important; }
   .swiper-slide-cover img {
@@ -5170,6 +5180,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 50px;
   border-bottom: 2px solid #8c8c8c;
   overflow: hidden;
+  z-index: 2;
   /* Tab Widget */ }
   .ems-tab .ems-tab-inner {
     /*overflow: hidden;*/ }
@@ -7275,6 +7286,9 @@ button.swiper-pagination-bullet {
     font-family: "medium";
     margin-top: 20px; }
 
+_:-ms-fullscreen, :root .ems-page-cart-colmn-3 {
+  max-width: 500px; }
+
 .sepetLogo {
   position: absolute;
   left: 0;
@@ -7646,18 +7660,64 @@ span[id$="lbfUyeKartBilgi"] {
       font-size: 24px;
       margin-bottom: 25px;
       display: block; }
+    .cart-section-right .ems-cart-summary .pnlDipToplamTable tbody {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
     .cart-section-right .ems-cart-summary .pnlDipToplamTable tr {
-      font-family: "medium"; }
+      font-family: "medium";
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
       .cart-section-right .ems-cart-summary .pnlDipToplamTable tr.pnlDipToplam_bankaKomisyon {
         display: none; }
       .cart-section-right .ems-cart-summary .pnlDipToplamTable tr.pnlDipToplam_indirimToplam {
         color: #ff6600 !important; }
+      .cart-section-right .ems-cart-summary .pnlDipToplamTable tr.pnlDipToplam_araToplam {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1; }
+      .cart-section-right .ems-cart-summary .pnlDipToplamTable tr.pnlDipToplam_kargoTutar {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2; }
+      .cart-section-right .ems-cart-summary .pnlDipToplamTable tr.pnlDipToplam_kulBankaBonus {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3; }
+      .cart-section-right .ems-cart-summary .pnlDipToplamTable tr.pnlDipToplam_indirimToplam {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+        order: 4; }
+      .cart-section-right .ems-cart-summary .pnlDipToplamTable tr.pnlDipToplam_kulBonusPara {
+        -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+        order: 5; }
+      .cart-section-right .ems-cart-summary .pnlDipToplamTable tr.pnlDipToplam_sipToplam {
+        -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+        order: 6; }
+      .cart-section-right .ems-cart-summary .pnlDipToplamTable tr.emos_invisible {
+        display: none; }
     .cart-section-right .ems-cart-summary .pnlDipToplamTable th {
       font-weight: normal;
       font-size: 14px;
       text-align: left;
       line-height: 33px;
       white-space: nowrap; }
+    .cart-section-right .ems-cart-summary .pnlDipToplamTable td {
+      line-height: 33px;
+      float: right; }
     .cart-section-right .ems-cart-summary .pnlDipToplamTable .pnlDipToplam_sipToplam td span, .cart-section-right .ems-cart-summary .pnlDipToplamTable .pnlDipToplam_sipToplam th span {
       font-family: "bold";
       font-size: 14px; }

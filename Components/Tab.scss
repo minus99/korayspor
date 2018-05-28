@@ -4,6 +4,7 @@
     margin-bottom: 50px;
     border-bottom:2px solid $mDark; 
     overflow: hidden;
+    z-index: 2;
     .ems-tab-inner{
         /*overflow: hidden;*/
         .dropdown {
