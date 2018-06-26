@@ -17394,7 +17394,7 @@ body.suggestions-popup-ready .custom-popup {
     display: inline-block;
     vertical-align: middle; }
   .ems-prd-detail .ems-prd-detail-top .ems-prd-product-code {
-    display: none; }
+    /*display: none;*/ }
   .ems-prd-detail .ems-prd-comment {
     text-align: right;
     display: none !important; }
